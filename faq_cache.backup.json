@@ -99,10 +99,10 @@
         ]
       },
       "answers": {
-        "ko": "인기 메뉴는 테바사키(닭날개 튀김), 닭껍질튀김, 교자예요. 생맥주는 삿포로와 에비스, 그리고 히든 메뉴 '쇼맥'이 있어요. 쇼맥은 일본 고구마 소주 '다이야메'를 삿포로 생맥주에 섞은 시그니처로, 부드럽고 향긋해요.",
-        "en": "Our popular picks are Tebasaki (fried chicken wings), crispy chicken skin, and gyoza. On draft we have Sapporo and Yebisu, plus a hidden menu called 'Shomac' — our signature, mixing Japanese sweet-potato shochu 'Daiyame' into Sapporo draft for a smooth, fragrant taste.",
-        "ja": "人気メニューは手羽先、鶏皮の唐揚げ、餃子です。生ビールはサッポロとエビス、そして裏メニューの「ショーメク」もございます。ショーメクは、日本のさつまいも焼酎「だいやめ」をサッポロ生に混ぜたシグネチャーで、まろやかで芳醇な味わいです。",
-        "zh": "人气菜品有手羽先（炸鸡翅）、炸鸡皮和饺子。生啤有札幌和惠比寿，还有隐藏菜单「烧麦酒」——我们的招牌，把日本红薯烧酎「Daiyame」调入札幌生啤，口感顺滑、香气怡人。"
+        "ko": "인기 세트 메뉴는 테바사키(닭날개 튀김), 닭껍질튀김, 교자 세 가지예요. 생맥주는 삿포로와 에비스가 있고, 히든 메뉴로 '쇼맥'도 있어요. 쇼맥은 고구마 향이 은은한 일본 쇼츄 '다이야메' 30ml를 삿포로 생맥주에 섞은 시그니처 메뉴로, 부드럽고 향긋한 풍미를 즐기실 수 있어요.",
+        "en": "Our popular sets are Tebasaki (fried chicken wings), crispy fried chicken skin, and gyoza. For draft beer we have Sapporo and Yebisu — plus a hidden menu called 'Shomac.' Shomac is our signature: 30ml of 'Daiyame,' a Japanese sweet-potato shochu with a gentle aroma, mixed into Sapporo draft for a smooth, fragrant taste.",
+        "ja": "人気のセットは手羽先（鶏の唐揚げ）、鶏皮の唐揚げ、餃子の3つです。生ビールはサッポロとエビス、そして裏メニューの「ショーメク」もございます。ショーメクは、さつまいもの香りがほのかに香る日本の焼酎「だいやめ」を30ml、サッポロ生に混ぜたシグネチャーで、まろやかで芳醇な味わいをお楽しみいただけます。",
+        "zh": "人气套餐有手羽先（炸鸡翅）、炸鸡皮和饺子三种。生啤有札幌(Sapporo)和惠比寿(Yebisu)，还有隐藏菜单「烧麦酒(Shomac)」。烧麦酒是我们的招牌：将带有淡淡红薯香气的日本烧酎「Daiyame」30ml调入札幌生啤，口感顺滑、香气怡人。"
       },
       "audio": {
         "ko": "recommend_ko.mp3",
@@ -533,10 +533,10 @@
       "zh": "narration_zh.mp3"
     },
     "scripts": {
-      "ko": "반갑습니다. 간빠의 맥주는 삿포로 본사의 '퍼펙트 푸어링' 기법으로 따릅니다. 향이 날아가지 않게 잔을 45도 기울여 70%까지 채우고, 나머지 30%는 크리미한 거품으로 채웁니다. 이 거품이 풍미를 가두고 산화를 막아, 첫 모금부터 끝까지 같은 맛을 지켜줍니다. 지금 바로 한 입 드시는 게 가장 시원하고 맛있습니다. 맛있게 즐기세요!",
-      "en": "Welcome! At Ganppa, we pour our beer using Sapporo's 'Perfect Pour' technique. We tilt the glass 45 degrees and fill it to 70% so the aroma stays in, then top the last 30% with a creamy foam head. That foam locks in the flavor and prevents oxidation, keeping the taste consistent from the first sip to the last. It's coldest and best the moment you take your first sip. Enjoy!",
-      "ja": "いらっしゃいませ。ガンパのビールは、サッポロ本社の「パーフェクトポアリング」技法で注いでいます。香りが逃げないようにグラスを45度傾けて70％まで注ぎ、残りの30％はクリーミーな泡で仕上げます。この泡が風味を閉じ込め、酸化を防いで、最初の一口から最後まで同じ美味しさを保ちます。今すぐ一口召し上がるのが一番冷たくて美味しいです。どうぞお楽しみください！",
-      "zh": "欢迎光临！甘趴的啤酒采用札幌总部的「完美注酒」手法。将杯子倾斜45度，只倒到70%，让香气不流失，剩下的30%用绵密的泡沫做成泡盖。这层泡沫能锁住风味、防止氧化，让您从第一口到最后都保持同样的美味。现在马上喝第一口最冰爽、最好喝。请慢用！"
+      "ko": "반갑습니다. 저희 ganpai 광안2호점에서는 맥주에 대한 설명과 함께 맥주를 제공해드립니다. 시작하겠습니다. 먼저, 맥주를 따르기 전에 하는 작업을 린싱(rinsing)이라고 합니다. 잔을 깨끗이 세척하고 차갑게 만드는 칠링(chilling) 역할을 합니다. 저희 ganpai의 푸어링 기법은 삿포로 본사의 퍼펙트 푸어링 기법입니다. 맥주는 향이 날아가지 않게 45도 기울여 70%까지만 따릅니다. 나머지 30%는 크리미한 거품으로 맥주 헤드(head)를 형성해 풍미를 유지하고 산화를 방지하여, 첫 입부터 마지막 모금까지 일관된 맛을 지켜줍니다. 마지막으로 표면의 거친 거품을 깔끔하게 제거하고, 잔을 깨끗이 씻어 완성합니다. 저희 맥주는 지금 바로 한 입 드시는 게 가장 시원하고 맛있습니다. 감사합니다.",
+      "en": "Welcome! Here at ganpai, Gwangan Branch 2, we serve our draft beer together with a short explanation. Let's begin. First, the step before pouring is called 'rinsing.' It cleans the glass and chills it — what we call 'chilling.' Our pouring method is the 'Perfect Pour' technique used at Sapporo's headquarters. We tilt the glass 45 degrees and fill it only to 70%, so the aroma doesn't escape. The remaining 30% forms a creamy foam head that locks in the flavor and prevents oxidation — keeping the taste consistent from the first sip to the last. Finally, we skim off the rough foam on top and rinse the glass clean to finish. Our beer is at its coldest and most refreshing the very moment you take your first sip. Enjoy, and thank you!",
+      "ja": "いらっしゃいませ。ganpai広安2号店では、ビールのご説明とともにビールをご提供しております。それでは始めさせていただきます。まず、ビールを注ぐ前に行う作業を「リンシング（rinsing）」と申します。グラスをきれいに洗い、冷やす「チリング（chilling）」の役割を果たします。当店ganpaiの注ぎ方は、サッポロ本社で使われている「パーフェクトポアリング」技法です。ビールは香りが逃げないようにグラスを45度傾け、70％まで注ぎます。残りの30％はクリーミーな泡でビールのヘッド（head）を作り、風味を保ち、酸化を防いで、最初の一口から最後の一口まで一貫した味わいを保ちます。最後に、表面に残った粗い泡をきれいに取り除き、グラスを整えて仕上げます。当店のビールは、今すぐ一口召し上がっていただくのが一番冷たくて美味しいです。ありがとうございます。",
+      "zh": "欢迎光临！在我们 ganpai啤酒 广安2号店，我们会一边为您讲解啤酒，一边为您奉上啤酒。那么，现在开始。首先，在倒啤酒之前进行的步骤叫做“润杯（rinsing）”。它的作用是把杯子清洗干净，并让杯子变凉，也就是“冰杯（chilling）”。我们 ganpai啤酒 采用的是札幌总部使用的“完美注酒（Perfect Pour）”手法。倒酒时将杯子倾斜45度，只倒到70%，这样香气就不会流失。剩下的30%用绵密的泡沫形成啤酒的“泡盖（head）”，锁住风味、防止氧化，让您从第一口到最后一口都保持一致的口感。最后，把表面残留的粗泡沫干净地刮除，再将杯子擦拭干净即完成。我们的啤酒，现在马上喝下第一口是最冰爽、最美味的。谢谢！"
     }
   },
   "narration_keg": {
@@ -559,10 +559,10 @@
         }
       },
       "scripts": {
-        "ko": "잠시 주목해 주세요! 여러분 덕분에 방금 [BEER] 케그를 새것으로 교체했습니다! 새 케그라 더 신선하고 맛있는 맥주를 드릴 수 있어요. 다 같이 큰 박수와 환호 부탁드려요! 자—— [BEER], 완전 새 거예요!",
-        "en": "May I have your attention, please! Thanks to all of you, we've just tapped a brand-new keg of [BEER]! A fresh keg means fresher, tastier beer for everyone. Let's hear a big round of applause and a cheer! Here we go —— a brand-new [BEER]!",
-        "ja": "皆さま、少しご注目ください！おかげさまで、ただいま[BEER]の樽（ケグ）を新しいものに交換しました！新しい樽なので、より新鮮で美味しいビールをお出しできます。みなさんで大きな拍手と歓声をお願いします！それでは——[BEER]、できたてです！",
-        "zh": "各位请注意一下！多亏大家光临，我们刚换上了一桶全新的[BEER]啤酒桶！新桶啤酒更新鲜、更美味。请大家一起热烈鼓掌、欢呼！来——全新的[BEER]！"
+        "ko": "잠시 주목 부탁드립니다! (종을 딸랑딸랑 흔들며) 여러분이 이렇게 많이 찾아와 주신 덕분에, 방금 저희 [BEER] 케그를 새것으로 교체했습니다! 케그를 새로 교체하면 더 신선하고 맛있는 맥주를 드릴 수 있어요. 제가 종을 흔들 때 다 같이 큰 박수와 환호 부탁드립니다. 그러면 더 열심히 하는 ganpai가 되겠습니다! 자—— [BEER] 새 거예요! [BEER] 완전 새 겁니다!",
+        "en": "May I have your attention, please! (ringing the bell) Thanks to all of you for coming out tonight, we've just tapped a brand-new keg of [BEER]! A fresh keg means even fresher, tastier beer for you. When I ring this bell, please give us a big round of applause and a cheer — it keeps the ganpai team fired up! Here we go —— fresh [BEER]! A brand-new [BEER]!",
+        "ja": "皆さま、少しご注目をお願いします！（ベルをチリンチリンと鳴らして）たくさんご来店いただいたおかげで、ただいま[BEER]の樽（ケグ）を新しいものに交換いたしました！樽を新しくすると、より新鮮で美味しいビールをお出しできます。私がベルを鳴らしたら、みなさんで大きな拍手と歓声をお願いします。スタッフ一同、さらに頑張ります！それでは——[BEER]、新しい樽です！できたての[BEER]です！",
+        "zh": "各位顾客，请稍微注意一下！（叮叮地摇铃）多亏大家今天这么捧场光临，我们刚刚换上了一桶全新的[BEER]啤酒桶！换上新桶后，就能为大家提供更新鲜、更美味的啤酒。当我摇铃的时候，请大家一起热烈鼓掌、欢呼，这样 ganpai 全体员工会更加努力！来——[BEER]，新桶到了！全新的[BEER]！"
       }
     },
     "step2_event_rps": {
@@ -578,21 +578,6 @@
         "ja": "新しい樽を記念して、簡単なゲームをご用意しました！私とじゃんけんをします。ルールは簡単です——私とあいこ、または負けた方は手を下げてください。最後まで勝ち残った方に、サッポロ生ビールを1杯プレゼント！それでは、いきますよ。出さないと負けですよ！最初はグー、じゃんけん——ポン！",
         "zh": "为庆祝换上新桶，我们准备了一个小游戏！大家和我玩猜拳（石头剪刀布）。规则很简单——和我平局或者输了的朋友，请把手放下。坚持到最后获胜的朋友，可以获得一杯札幌生啤！准备好了吗？不出就算输哦！石头、剪刀、布！"
       }
-    }
-  },
-  "welcome": {
-    "intent": "환영 인사",
-    "scripts": {
-      "ko": "어서 오세요! 무엇이든 편하게 물어보세요.",
-      "en": "Welcome! Feel free to ask us anything.",
-      "ja": "いらっしゃいませ！何でもお気軽にお尋ねください。",
-      "zh": "欢迎光临！有任何问题都可以问我们。"
-    },
-    "audio": {
-      "ko": "welcome_ko.mp3",
-      "en": "welcome_en.mp3",
-      "ja": "welcome_ja.mp3",
-      "zh": "welcome_zh.mp3"
     }
   }
 }

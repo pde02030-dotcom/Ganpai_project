@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>ganpai 광안2호점 · 다국어 안내</title>
+<!-- PWA -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1a1410">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ganpai 안내">
+<style>
+  :root{
+    --bg:#1a1410; --panel:#241c16; --panel2:#2e241c;
+    --accent:#d7263d; --accent2:#f4a259; --gold:#e8c170;
+    --ink:#f5ece0; --ink-dim:#b9a892; --line:#3a2e24;
+    --ok:#5fae7e;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0; height:100%;}
+  body{
+    background:radial-gradient(120% 80% at 50% -10%, #2a1e16 0%, var(--bg) 60%);
+    color:var(--ink);
+    font-family:-apple-system,"Hiragino Kaku Gothic ProN","Apple SD Gothic Neo","Noto Sans CJK KR","Microsoft YaHei",sans-serif;
+    min-height:100%;
+    display:flex; flex-direction:column;
+    padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  header{
+    padding:18px 20px 14px; text-align:center; position:relative;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#2b1f17,transparent);
+  }
+  .homebtn{
+    position:absolute; top:12px; left:14px;
+    width:42px; height:42px; border-radius:50%;
+    border:1px solid var(--line); background:var(--panel); color:var(--ink);
+    font-size:20px; cursor:pointer; transition:.12s; line-height:1;
+  }
+  .homebtn:active{transform:scale(.92); background:var(--accent); border-color:var(--accent);}
+  .voicebtn{
+    position:absolute; top:12px; right:14px;
+    width:42px; height:42px; border-radius:50%;
+    border:1px solid var(--line); background:var(--panel); color:var(--ink);
+    font-size:19px; cursor:pointer; transition:.12s; line-height:1;
+  }
+  .voicebtn:active{transform:scale(.92); background:var(--accent2); border-color:var(--accent2);}
+  /* 음성 선택 메뉴 */
+  .vlist{display:flex; flex-direction:column; gap:10px; margin:6px 0 2px;}
+  .vopt{display:flex; align-items:center; gap:12px; padding:15px 16px; border-radius:14px;
+        border:1px solid var(--line); background:var(--panel); color:var(--ink);
+        font-size:16px; font-weight:700; cursor:pointer;}
+  .vopt.on{border-color:var(--accent2); background:#2e241c;}
+  .vopt .vi{font-size:24px; line-height:1;}
+  .vopt .vchk{margin-left:auto; color:var(--accent2); font-weight:800;}
+  .brand{font-size:24px; font-weight:800; letter-spacing:.5px;}
+  .brand .dot{color:var(--accent);}
+  .sub{font-size:12px; color:var(--ink-dim); margin-top:3px;}
+  .lanterns{font-size:18px; letter-spacing:6px; margin-bottom:4px;}
+
+  .langbar{display:none;}  /* 언어 전환은 진입화면(🌐)에서 — 메인 화면 정리 */
+  .langbar.on{display:flex; gap:8px; justify-content:center; padding:14px 16px 4px; flex-wrap:wrap;}
+  .langbtn{
+    border:1px solid var(--line); background:var(--panel);
+    color:var(--ink); padding:9px 16px; border-radius:999px;
+    font-size:15px; font-weight:700; cursor:pointer; transition:.15s;
+  }
+  .langbtn .flag{margin-right:6px;}
+  .langbtn.active{background:var(--accent); border-color:var(--accent); color:#fff;}
+
+  .prompt{text-align:center; font-size:15px; color:var(--gold); margin:10px 0 2px; font-weight:600;}
+
+  main{flex:1; padding:10px 16px 96px; max-width:760px; margin:0 auto; width:100%;}
+  .section-label{font-size:12px; color:var(--ink-dim); text-transform:uppercase; letter-spacing:1px; margin:18px 6px 8px; font-weight:700;}
+
+  .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:11px;}
+  .card{
+    background:var(--panel); border:1px solid var(--line); border-radius:16px;
+    padding:16px 14px; min-height:84px; cursor:pointer; transition:.12s;
+    display:flex; flex-direction:column; gap:6px; justify-content:center;
+  }
+  .card:active{transform:scale(.97); background:var(--panel2);}
+  .card .ic{font-size:26px;}
+  .card .lbl{font-size:15px; font-weight:700; line-height:1.25;}
+
+  .special{display:grid; grid-template-columns:1fr; gap:11px; margin-top:4px;}
+  .bigcard{
+    background:linear-gradient(135deg,#33231a,#27201a);
+    border:1px solid #4a3320; border-radius:18px; padding:18px 16px;
+    cursor:pointer; display:flex; align-items:center; gap:14px; transition:.12s;
+  }
+  .bigcard:active{transform:scale(.98);}
+  .bigcard .ic{font-size:30px;}
+  .bigcard .lbl{font-size:17px; font-weight:800;}
+  .bigcard .desc{font-size:12px; color:var(--ink-dim); margin-top:2px;}
+  .bigcard.staff{background:linear-gradient(135deg,#3a1f22,#2a1818); border-color:#5a2730;}
+  .bigcard.keg{border-color:var(--gold); box-shadow:0 0 0 0 rgba(232,193,112,.5); animation:kegpulse 2.4s infinite;}
+  @keyframes kegpulse{0%{box-shadow:0 0 0 0 rgba(232,193,112,.45);}70%{box-shadow:0 0 0 12px rgba(232,193,112,0);}100%{box-shadow:0 0 0 0 rgba(232,193,112,0);}}
+
+  /* overlay */
+  .overlay{
+    position:fixed; inset:0; background:rgba(10,7,5,.72); backdrop-filter:blur(3px);
+    display:none; align-items:flex-end; justify-content:center; z-index:50;
+  }
+  .overlay.show{display:flex;}
+  .sheet{
+    background:var(--panel2); width:100%; max-width:760px;
+    border-radius:22px 22px 0 0; border:1px solid var(--line); border-bottom:none;
+    padding:20px 20px 26px; animation:rise .22s ease;
+  }
+  @keyframes rise{from{transform:translateY(40px);opacity:.5;}to{transform:translateY(0);opacity:1;}}
+  .sheet .ttl{font-size:18px; font-weight:800; display:flex; align-items:center; gap:10px; margin-bottom:10px;}
+  .sheet .body{font-size:17px; line-height:1.6; color:var(--ink);}
+  .nowplaying{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--gold); margin:14px 0 4px; min-height:18px;}
+  .eq{display:inline-flex; gap:2px; align-items:flex-end; height:14px;}
+  .eq span{width:3px; background:var(--gold); animation:bounce 1s infinite ease-in-out;}
+  .eq span:nth-child(2){animation-delay:.15s;} .eq span:nth-child(3){animation-delay:.3s;} .eq span:nth-child(4){animation-delay:.45s;}
+  @keyframes bounce{0%,100%{height:4px;}50%{height:14px;}}
+  .row{display:flex; gap:10px; margin-top:16px;}
+  .btn{flex:1; padding:14px; border-radius:13px; border:none; font-size:15px; font-weight:700; cursor:pointer;}
+  .btn.replay{background:var(--accent2); color:#2a1810;}
+  .btn.close{background:var(--panel); color:var(--ink); border:1px solid var(--line);}
+  .choice{display:flex; gap:10px; margin:8px 0 4px;}
+  .choice button{flex:1; padding:14px; border-radius:13px; border:1px solid var(--line); background:var(--panel); color:var(--ink); font-size:15px; font-weight:700; cursor:pointer;}
+  .choice button:active{background:var(--accent); border-color:var(--accent); color:#fff;}
+  .step-hint{font-size:13px; color:var(--ink-dim); margin-bottom:6px;}
+
+  /* 언어 우선 진입 화면 (gate) */
+  #gate{
+    position:fixed; inset:0; z-index:100;
+    background:radial-gradient(120% 80% at 50% -5%, #2a1e16 0%, var(--bg) 60%);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:24px; text-align:center;
+  }
+  #gate .lanterns{font-size:30px; letter-spacing:10px; margin-bottom:10px;}
+  #gate .brand{font-size:26px; font-weight:800; margin-bottom:6px;}
+  #gate .brand .dot{color:var(--accent);}
+  #gate .pick{
+    font-size:14px; color:var(--gold); margin:6px 0 26px; line-height:1.8; font-weight:600;
+  }
+  #gate .langs{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; width:100%; max-width:440px;}
+  #gate .lang{
+    background:var(--panel); border:1px solid var(--line); border-radius:18px;
+    padding:22px 14px; cursor:pointer; transition:.12s;
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+  }
+  #gate .lang:active{transform:scale(.96); background:var(--accent); border-color:var(--accent);}
+  #gate .lang .fl{font-size:42px; line-height:1;}
+  #gate .lang .nm{font-size:18px; font-weight:800;}
+  /* 화면 어디서나 닿는 하단 고정 액션바 (푸어링·종소리·직원호출) */
+  .actionbar{
+    position:fixed; left:0; right:0; bottom:0; z-index:40;
+    display:flex; gap:8px;
+    padding:9px 12px calc(9px + env(safe-area-inset-bottom));
+    background:rgba(20,15,11,.93); backdrop-filter:blur(8px);
+    border-top:1px solid var(--line);
+  }
+  .actionbar button{
+    flex:1; border:1px solid var(--line); border-radius:14px; padding:11px 6px;
+    background:var(--panel); color:var(--ink); cursor:pointer; transition:.12s;
+    display:flex; flex-direction:column; align-items:center; gap:3px;
+  }
+  .actionbar button:active{transform:scale(.95);}
+  .actionbar .ic{font-size:22px; line-height:1;}
+  .actionbar .t{font-size:12px; font-weight:800;}
+  .actionbar .b-beer{background:linear-gradient(135deg,#33231a,#2a2018); border-color:#5a4327;}
+  .actionbar .b-keg{border-color:var(--gold); animation:kegpulse 2.4s infinite;}
+  .actionbar .b-staff{background:linear-gradient(135deg,#3a1f22,#2a1818); border-color:#7a2c38; color:#ffd9dd;}
+  .err{margin:40px auto; max-width:520px; background:var(--panel); border:1px solid var(--accent); border-radius:14px; padding:20px; font-size:14px; line-height:1.7;}
+  .err code{background:#000; color:var(--gold); padding:2px 7px; border-radius:5px; font-size:13px;}
+  footer{text-align:center; font-size:11px; color:var(--ink-dim); padding:10px;}
+</style>
+</head>
+<body>
+<!-- 언어 우선 진입 화면 -->
+<div id="gate">
+  <div class="lanterns">🏮🍺🏮</div>
+  <div class="brand">ganpai<span class="dot"> ·</span> 광안2호점</div>
+  <div class="pick">언어를 선택하세요<br>Select language · 言語を選択 · 选择语言</div>
+  <div class="langs">
+    <div class="lang" onclick="enter('ko')"><span class="fl">🇰🇷</span><span class="nm">한국어</span></div>
+    <div class="lang" onclick="enter('en')"><span class="fl">🇺🇸</span><span class="nm">English</span></div>
+    <div class="lang" onclick="enter('ja')"><span class="fl">🇯🇵</span><span class="nm">日本語</span></div>
+    <div class="lang" onclick="enter('zh')"><span class="fl">🇨🇳</span><span class="nm">中文</span></div>
+  </div>
+</div>
+
+<header>
+  <button class="homebtn" onclick="showGate()" aria-label="Language / 언어">🌐</button>
+  <button class="voicebtn" onclick="openVoice()" aria-label="Voice / 음성">🎙️</button>
+  <div class="lanterns">🏮🍺🏮</div>
+  <div class="brand">ganpai<span class="dot"> ·</span> 광안2호점</div>
+  <div class="sub" id="sub">스탠딩 바 · 다국어 안내 도우미</div>
+</header>
+
+<div class="langbar" id="langbar"></div>
+<div class="prompt" id="prompt"></div>
+
+<main id="main">
+  <div class="section-label" id="lbl-faq"></div>
+  <div class="grid" id="faqGrid"></div>
+</main>
+
+<nav class="actionbar" id="actionbar" style="display:none"></nav>
+
+<div class="overlay" id="overlay">
+  <div class="sheet" id="sheet"></div>
+</div>
+
+<footer>ganpai MVP · 버튼식 프론트 (음성 캐시 재생) · STT는 배포 단계에서 연결</footer>
+
+<audio id="player"></audio>
+
+<script>
+// PWA 서비스워커 등록 (localhost·https에서만 동작 → 오프라인 캐싱 활성화)
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", ()=> navigator.serviceWorker.register("sw.js").catch(()=>{}));
+}
+</script>
+
+<script>
+const AUDIO_DIR = "audio/";
+let DATA = null;
+let lang = "ko";
+
+const LANGS = [
+  {code:"ko", flag:"🇰🇷", name:"한국어"},
+  {code:"en", flag:"🇺🇸", name:"English"},
+  {code:"ja", flag:"🇯🇵", name:"日本語"},
+  {code:"zh", flag:"🇨🇳", name:"中文"},
+];
+
+// UI 문구 (화면 텍스트만 코드에 둠 — 답변 콘텐츠는 faq_cache.json)
+const UI = {
+  prompt:   {ko:"무엇이 궁금하세요? 눌러보세요", en:"What can we help with? Tap below", ja:"何かお探しですか？タップしてください", zh:"需要什么帮助？请点击"},
+  faqLabel: {ko:"자주 묻는 질문", en:"Frequently Asked", ja:"よくある質問", zh:"常见问题"},
+  expLabel: {ko:"가게 체험 · 이벤트", en:"Experience · Events", ja:"店の体験・イベント", zh:"店内体验·活动"},
+  playing:  {ko:"재생 중…", en:"Playing…", ja:"再生中…", zh:"播放中…"},
+  replay:   {ko:"다시 듣기", en:"Replay", ja:"もう一度", zh:"重听"},
+  close:    {ko:"닫기", en:"Close", ja:"閉じる", zh:"关闭"},
+  beerTtl:  {ko:"🍺 퍼펙트 푸어링 설명", en:"🍺 The Perfect Pour", ja:"🍺 パーフェクト注ぎ", zh:"🍺 完美倒酒讲解"},
+  beerDesc: {ko:"삿포로를 가장 맛있게 따르는 법", en:"How we pour Sapporo just right", ja:"サッポロの美味しい注ぎ方", zh:"札幌啤酒的最佳倒法"},
+  kegTtl:   {ko:"🔔 케그 교체 이벤트", en:"🔔 Keg-Change Event", ja:"🔔 樽交換イベント", zh:"🔔 换桶活动"},
+  kegDesc:  {ko:"종이 울리면 다 같이 가위바위보!", en:"Bell rings → everyone plays rock-paper-scissors!", ja:"鐘が鳴ったらみんなでじゃんけん！", zh:"铃声响起，大家一起猜拳！"},
+  kegCardTtl:  {ko:"🔔 종소리가 울렸나요?", en:"🔔 Heard the bell?", ja:"🔔 鐘が鳴りましたか？", zh:"🔔 听到铃声了吗？"},
+  kegCardDesc: {ko:"지금 맥주통을 바꾸는 중 — 함께 가위바위보!", en:"We're changing the keg — join the game!", ja:"今、樽を交換中 — 一緒にじゃんけん！", zh:"正在换酒桶 — 一起来猜拳！"},
+  kegIntro: {ko:"방금 종소리는 맥주통(케그)을 새로 바꾸는 신호예요. 교체가 끝나면 다 같이 가위바위보! 이긴 분께 삿포로 한 잔을 드려요 🍺",
+             en:"That bell means we're tapping a fresh keg! When it's ready, everyone plays rock-paper-scissors — the winner gets a free Sapporo 🍺",
+             ja:"今の鐘は、新しい樽（ケグ）に交換する合図です。交換が終わったら、みんなでじゃんけん！勝った方にサッポロを1杯プレゼント🍺",
+             zh:"刚才的铃声是更换新酒桶的信号。换好后大家一起猜拳，获胜者可获赠一杯札幌啤酒🍺"},
+  staffTtl: {ko:"🙋 직원 호출", en:"🙋 Call Staff", ja:"🙋 スタッフを呼ぶ", zh:"🙋 呼叫店员"},
+  voiceTitle:{ko:"음성 선택", en:"Choose a voice", ja:"音声を選ぶ", zh:"选择语音"},
+  voiceOpt:{
+    bold_f:{ko:"당찬 여성", en:"Bold — Female", ja:"力強い女性", zh:"活力女声"},
+    bold_m:{ko:"당찬 남성", en:"Bold — Male", ja:"力強い男性", zh:"活力男声"},
+  },
+  barBeer:  {ko:"푸어링", en:"The Pour", ja:"注ぎ方", zh:"倒酒讲解"},
+  barKeg:   {ko:"종소리?", en:"The Bell?", ja:"鐘の音?", zh:"铃声?"},
+  barStaff: {ko:"직원 호출", en:"Call Staff", ja:"スタッフ", zh:"呼叫店员"},
+  staffDesc:{ko:"알레르기·환불 등 곤란한 질문은 직원에게", en:"Allergies, refunds & tricky questions", ja:"アレルギー・返金などはスタッフへ", zh:"过敏·退款等问题请找店员"},
+  kegStep1: {ko:"직원이 알려준 맥주를 눌러주세요", en:"Tap the beer the staff announced", ja:"スタッフが伝えたビールを選んでください", zh:"请点击店员告知的啤酒"},
+  kegStep2: {ko:"이제 가위바위보 한판!", en:"Now let's play rock-paper-scissors!", ja:"さあ、じゃんけん！", zh:"现在来猜拳！"},
+  next:     {ko:"가위바위보 시작 ▶", en:"Start the game ▶", ja:"じゃんけん開始 ▶", zh:"开始猜拳 ▶"},
+};
+
+// FAQ 버튼 메타 (id는 faq_cache.json과 매칭 / 아이콘+다국어 라벨은 UI)
+const FAQ_META = [
+  {id:"order",       ic:"📝", l:{ko:"주문 방법", en:"How to Order", ja:"注文方法", zh:"如何点单"}},
+  {id:"recommend",   ic:"⭐", l:{ko:"추천 메뉴", en:"Recommendations", ja:"おすすめ", zh:"推荐菜单"}},
+  {id:"seat_charge", ic:"🪑", l:{ko:"자릿세·최소주문", en:"Seat Charge", ja:"席料・最低注文", zh:"座位费"}},
+  {id:"payment",     ic:"💳", l:{ko:"결제 수단", en:"Payment", ja:"お支払い", zh:"支付方式"}},
+  {id:"hours",       ic:"🕘", l:{ko:"영업·마감 시간", en:"Hours", ja:"営業時間", zh:"营业时间"}},
+  {id:"toilet_wifi", ic:"🚻", l:{ko:"화장실·Wi-Fi", en:"Restroom·Wi-Fi", ja:"トイレ・Wi-Fi", zh:"洗手间·Wi-Fi"}},
+  {id:"smoking_age", ic:"🚬", l:{ko:"흡연·연령", en:"Smoking·Age", ja:"喫煙・年齢", zh:"吸烟·年龄"}},
+  {id:"spicy",       ic:"🌶️", l:{ko:"매운맛·메뉴 특징", en:"Is it spicy?", ja:"辛さ・特徴", zh:"辣度·菜品"}},
+  {id:"non_alcohol", ic:"🥤", l:{ko:"무알콜·음료", en:"Non-Alcoholic", ja:"ノンアル・ドリンク", zh:"无酒精饮料"}},
+];
+
+const player = document.getElementById("player");
+const overlay = document.getElementById("overlay");
+const sheet = document.getElementById("sheet");
+
+// 선택된 음성 프로필 (bold_f=당찬 여성 / bold_m=당찬 남성)
+const VOICES = ["bold_f","bold_m"];
+let VOICE = "bold_f";
+try { const v = localStorage.getItem("ganpai_voice"); if (VOICES.includes(v)) VOICE = v; } catch(e){}
+
+function play(file){            // 공용 파일(종소리 등) 그대로 재생
+  player.src = AUDIO_DIR + file;
+  player.play().catch(()=>{});
+}
+function playV(file){           // 음성 파일 → 선택된 프로필 폴더에서 재생
+  play(VOICE + "/" + file);
+}
+
+function eqHtml(){ return '<span class="eq"><span></span><span></span><span></span><span></span></span>'; }
+
+function openSheet(html){ sheet.innerHTML = html; overlay.classList.add("show"); }
+function closeSheet(){ overlay.classList.remove("show"); player.pause(); }
+
+function answerSheet(icon, title, text, file){
+  playV(file);
+  openSheet(`
+    <div class="ttl">${icon} ${title}</div>
+    <div class="body">${text}</div>
+    <div class="nowplaying">${eqHtml()} ${UI.playing[lang]}</div>
+    <div class="row">
+      <button class="btn replay" onclick="playV('${file}')">🔁 ${UI.replay[lang]}</button>
+      <button class="btn close" onclick="closeSheet()">${UI.close[lang]}</button>
+    </div>`);
+}
+
+function openFaq(id){
+  const f = DATA.faqs.find(x=>x.id===id);
+  const meta = FAQ_META.find(x=>x.id===id);
+  answerSheet(meta.ic, meta.l[lang], f.answers[lang], f.audio[lang]);
+}
+
+function openBeer(){
+  const nb = DATA.narration_beer;
+  answerSheet("🍺", UI.beerTtl[lang], nb.scripts[lang], nb.audio[lang]);
+}
+
+function openStaff(){
+  const e = DATA.escalation;
+  answerSheet("🙋", UI.staffTtl[lang], e.responses[lang], "escalation_"+lang+".mp3");
+}
+
+function openKeg(){
+  const k = DATA.narration_keg;
+  play("bell.mp3?v=6");   // 실제 종소리 — ?v= 꼬리표로 캐시 강제 갱신(종소리 바꿀 때 숫자 올릴 것)
+  // step1: 맥주 선택
+  openSheet(`
+    <div class="ttl">🔔 ${UI.kegTtl[lang]}</div>
+    <div class="body" style="font-size:15px; margin-bottom:14px;">${UI.kegIntro[lang]}</div>
+    <div class="step-hint">${UI.kegStep1[lang]}</div>
+    <div class="choice">
+      <button onclick="kegAnnounce('sapporo')">🍺 ${lang==='zh'?'札幌':(lang==='ja'?'サッポロ':'Sapporo')}</button>
+      <button onclick="kegAnnounce('yebisu')">🍺 ${lang==='zh'?'惠比寿':(lang==='ja'?'エビス':'Yebisu')}</button>
+    </div>
+    <div class="row"><button class="btn close" onclick="closeSheet()">${UI.close[lang]}</button></div>`);
+}
+
+function kegAnnounce(variant){
+  const k = DATA.narration_keg;
+  const file = k.step1_announce.audio_variants[variant][lang];
+  const text = k.step1_announce.scripts[lang].replace("[BEER]",
+      variant==='sapporo' ? {ko:'삿포로',en:'Sapporo',ja:'サッポロ',zh:'札幌'}[lang]
+                          : {ko:'에비스',en:'Yebisu',ja:'エビス',zh:'惠比寿'}[lang]);
+  playV(file);
+  openSheet(`
+    <div class="ttl">🔔 ${UI.kegTtl[lang]}</div>
+    <div class="body">${text}</div>
+    <div class="nowplaying">${eqHtml()} ${UI.playing[lang]}</div>
+    <div class="row">
+      <button class="btn replay" onclick="playV('${file}')">🔁 ${UI.replay[lang]}</button>
+      <button class="btn close" onclick="kegRps()">${UI.next[lang]}</button>
+    </div>`);
+}
+
+function kegRps(){
+  const r = DATA.narration_keg.step2_event_rps;
+  playV(r.audio[lang]);
+  openSheet(`
+    <div class="ttl">✊✋✌️ ${UI.kegStep2[lang]}</div>
+    <div class="body">${r.scripts[lang]}</div>
+    <div class="nowplaying">${eqHtml()} ${UI.playing[lang]}</div>
+    <div class="row">
+      <button class="btn replay" onclick="playV('${r.audio[lang]}')">🔁 ${UI.replay[lang]}</button>
+      <button class="btn close" onclick="closeSheet()">${UI.close[lang]}</button>
+    </div>`);
+}
+
+function renderLangs(){
+  const bar = document.getElementById("langbar");
+  bar.innerHTML = LANGS.map(L=>
+    `<button class="langbtn ${L.code===lang?'active':''}" onclick="setLang('${L.code}')">
+       <span class="flag">${L.flag}</span>${L.name}</button>`).join("");
+}
+function setLang(c){ lang=c; renderLangs(); renderBody(); }
+
+function renderBody(){
+  document.getElementById("prompt").textContent = UI.prompt[lang];
+  document.getElementById("lbl-faq").textContent = UI.faqLabel[lang];
+  document.getElementById("faqGrid").innerHTML = FAQ_META.map(m=>
+    `<div class="card" onclick="openFaq('${m.id}')">
+       <div class="ic">${m.ic}</div><div class="lbl">${m.l[lang]}</div></div>`).join("");
+  // 푸어링·종소리·직원호출 = 화면 어디서나 닿는 하단 고정 액션바
+  const bar = document.getElementById("actionbar");
+  bar.innerHTML = `
+    <button class="b-beer" onclick="openBeer()"><span class="ic">🍺</span><span class="t">${UI.barBeer[lang]}</span></button>
+    <button class="b-keg" onclick="openKeg()"><span class="ic">🔔</span><span class="t">${UI.barKeg[lang]}</span></button>`;
+  bar.style.display = "flex";
+}
+
+overlay.addEventListener("click", e=>{ if(e.target===overlay) closeSheet(); });
+
+// 언어 우선 진입 → 선택 시 본 화면 진입
+let dataReady=false, pendingLang=null;
+function enter(code){
+  if(!dataReady){ pendingLang=code; return; }   // 데이터 로딩 전 탭하면 로딩 후 자동 진입
+  lang=code; renderBody();
+  document.getElementById("gate").style.display="none";
+  playV("welcome_"+code+".mp3");   // ④ 진입 환영 멘트 (탭 = 사용자 제스처라 자동재생 허용)
+}
+// 🌐 버튼 → 언어 선택(진입) 화면으로 돌아가기. 새 손님 리셋용.
+function showGate(){
+  closeSheet();
+  document.getElementById("gate").style.display="flex";
+  window.scrollTo(0,0);
+}
+
+// 🎙️ 음성 선택
+function openVoice(){
+  const opts=VOICES, icons={bold_f:"💥",bold_m:"🎤"};
+  openSheet(`
+    <div class="ttl">🎙️ ${UI.voiceTitle[lang]}</div>
+    <div class="vlist">
+      ${opts.map(v=>`<button class="vopt ${v===VOICE?'on':''}" onclick="setVoice('${v}')">
+         <span class="vi">${icons[v]}</span><span>${UI.voiceOpt[v][lang]}</span>
+         ${v===VOICE?'<span class="vchk">✓</span>':''}</button>`).join("")}
+    </div>
+    <div class="row"><button class="btn close" onclick="closeSheet()">${UI.close[lang]}</button></div>`);
+}
+function setVoice(v){
+  VOICE=v;
+  try{ localStorage.setItem("ganpai_voice",v); }catch(e){}
+  closeSheet();
+  playV("welcome_"+lang+".mp3");   // 새 음성 미리듣기
+}
+
+fetch("faq_cache.json")
+  .then(r=>r.json())
+  .then(d=>{ DATA=d; dataReady=true; if(pendingLang) enter(pendingLang); })
+  .catch(()=>{
+    document.getElementById("gate").style.display="none";
+    document.getElementById("main").innerHTML = `
+      <div class="err">
+        <b>⚠️ faq_cache.json 을 불러오지 못했습니다.</b><br><br>
+        브라우저에서 파일을 더블클릭하면(<code>file://</code>) 보안 정책상 JSON·음성을 못 읽습니다.
+        아래처럼 <b>로컬 서버</b>로 띄워주세요 (이 폴더에서 터미널 실행):<br><br>
+        <code>python3 -m http.server 8000</code><br><br>
+        그다음 브라우저에서 → <code>http://localhost:8000</code> 접속.
+      </div>`;
+  });
+</script>
+</body>
+</html>
