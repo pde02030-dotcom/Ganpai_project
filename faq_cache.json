@@ -3,7 +3,12 @@
     "name_ko": "ganpai 광안2호점",
     "name_en": "ganpai, Gwangan Branch 2",
     "concept": "일본풍 타치노미(스탠딩 바) 생맥주 선술집",
-    "languages": ["ko", "en", "ja", "zh"]
+    "languages": [
+      "ko",
+      "en",
+      "ja",
+      "zh"
+    ]
   },
   "config": {
     "match_threshold": 0.45,
@@ -14,10 +19,34 @@
       "id": "order",
       "intent": "주문·재주문 방법",
       "triggers": {
-        "ko": ["주문", "어떻게 주문", "추가 주문", "재주문", "한 잔 더", "시키"],
-        "en": ["order", "how to order", "another", "one more", "reorder"],
-        "ja": ["注文", "頼", "おかわり", "もう一杯"],
-        "zh": ["点", "怎么点", "再来", "加点", "续杯"]
+        "ko": [
+          "주문",
+          "어떻게 주문",
+          "추가 주문",
+          "재주문",
+          "한 잔 더",
+          "시키"
+        ],
+        "en": [
+          "order",
+          "how to order",
+          "another",
+          "one more",
+          "reorder"
+        ],
+        "ja": [
+          "注文",
+          "頼",
+          "おかわり",
+          "もう一杯"
+        ],
+        "zh": [
+          "点",
+          "怎么点",
+          "再来",
+          "加点",
+          "续杯"
+        ]
       },
       "answers": {
         "ko": "메뉴판에서 고르신 뒤 직원에게 말씀하시면 돼요. 주문할 때마다 카드로 선결제예요. 한 잔 더 하실 때도 같은 방식입니다.",
@@ -25,16 +54,49 @@
         "ja": "メニューからお選びになって、スタッフにお申し付けください。ご注文ごとにカードで先払いです。おかわりの際も同じ流れです。",
         "zh": "从菜单上选好后告诉店员即可。每次点单都用信用卡先付款，续杯时也是一样的方式。"
       },
-      "audio": { "ko": "order_ko.mp3", "en": "order_en.mp3", "ja": "order_ja.mp3", "zh": "order_zh.mp3" }
+      "audio": {
+        "ko": "order_ko.mp3",
+        "en": "order_en.mp3",
+        "ja": "order_ja.mp3",
+        "zh": "order_zh.mp3"
+      }
     },
     {
       "id": "recommend",
       "intent": "추천 메뉴",
       "triggers": {
-        "ko": ["추천", "뭐가 맛있", "인기", "잘 나가", "시그니처", "쇼맥", "맥주 종류"],
-        "en": ["recommend", "popular", "best", "signature", "what's good", "beer", "menu"],
-        "ja": ["おすすめ", "人気", "美味しい", "シグネチャー", "ビール"],
-        "zh": ["推荐", "招牌", "好吃", "热门", "啤酒"]
+        "ko": [
+          "추천",
+          "뭐가 맛있",
+          "인기",
+          "잘 나가",
+          "시그니처",
+          "쇼맥",
+          "맥주 종류"
+        ],
+        "en": [
+          "recommend",
+          "popular",
+          "best",
+          "signature",
+          "what's good",
+          "beer",
+          "menu"
+        ],
+        "ja": [
+          "おすすめ",
+          "人気",
+          "美味しい",
+          "シグネチャー",
+          "ビール"
+        ],
+        "zh": [
+          "推荐",
+          "招牌",
+          "好吃",
+          "热门",
+          "啤酒"
+        ]
       },
       "answers": {
         "ko": "인기 세트 메뉴는 테바사키(닭날개 튀김), 닭껍질튀김, 교자 세 가지예요. 생맥주는 삿포로와 에비스가 있고, 히든 메뉴로 '쇼맥'도 있어요. 쇼맥은 고구마 향이 은은한 일본 쇼츄 '다이야메' 30ml를 삿포로 생맥주에 섞은 시그니처 메뉴로, 부드럽고 향긋한 풍미를 즐기실 수 있어요.",
@@ -42,16 +104,47 @@
         "ja": "人気のセットは手羽先（鶏の唐揚げ）、鶏皮の唐揚げ、餃子の3つです。生ビールはサッポロとエビス、そして裏メニューの「ショーメク」もございます。ショーメクは、さつまいもの香りがほのかに香る日本の焼酎「だいやめ」を30ml、サッポロ生に混ぜたシグネチャーで、まろやかで芳醇な味わいをお楽しみいただけます。",
         "zh": "人气套餐有手羽先（炸鸡翅）、炸鸡皮和饺子三种。生啤有札幌(Sapporo)和惠比寿(Yebisu)，还有隐藏菜单「烧麦酒(Shomac)」。烧麦酒是我们的招牌：将带有淡淡红薯香气的日本烧酎「Daiyame」30ml调入札幌生啤，口感顺滑、香气怡人。"
       },
-      "audio": { "ko": "recommend_ko.mp3", "en": "recommend_en.mp3", "ja": "recommend_ja.mp3", "zh": "recommend_zh.mp3" }
+      "audio": {
+        "ko": "recommend_ko.mp3",
+        "en": "recommend_en.mp3",
+        "ja": "recommend_ja.mp3",
+        "zh": "recommend_zh.mp3"
+      }
     },
     {
       "id": "seat_charge",
       "intent": "자릿세·최소주문",
       "triggers": {
-        "ko": ["자릿세", "기본 안주", "오토시", "꼭 시켜", "최소 주문", "무조건"],
-        "en": ["cover charge", "seating fee", "otoshi", "minimum", "have to order", "must order"],
-        "ja": ["お通し", "席料", "チャージ", "頼まないと", "最低"],
-        "zh": ["位费", "餐前小菜", "最低消费", "一定要点", "必须点"]
+        "ko": [
+          "자릿세",
+          "기본 안주",
+          "오토시",
+          "꼭 시켜",
+          "최소 주문",
+          "무조건"
+        ],
+        "en": [
+          "cover charge",
+          "seating fee",
+          "otoshi",
+          "minimum",
+          "have to order",
+          "must order"
+        ],
+        "ja": [
+          "お通し",
+          "席料",
+          "チャージ",
+          "頼まないと",
+          "最低"
+        ],
+        "zh": [
+          "位费",
+          "餐前小菜",
+          "最低消费",
+          "一定要点",
+          "必须点"
+        ]
       },
       "answers": {
         "ko": "기본 안주(오토시)나 자릿세는 없어요. 다만 1인당 음료 1잔은 꼭 주문하셔야 해요.",
@@ -59,16 +152,46 @@
         "ja": "お通しや席料はございません。ただ、お一人様につきドリンクを1杯はご注文をお願いしております。",
         "zh": "我们没有餐前小菜(otoshi)费，也没有位费。只是请每位客人至少点一杯饮品。"
       },
-      "audio": { "ko": "seat_charge_ko.mp3", "en": "seat_charge_en.mp3", "ja": "seat_charge_ja.mp3", "zh": "seat_charge_zh.mp3" }
+      "audio": {
+        "ko": "seat_charge_ko.mp3",
+        "en": "seat_charge_en.mp3",
+        "ja": "seat_charge_ja.mp3",
+        "zh": "seat_charge_zh.mp3"
+      }
     },
     {
       "id": "payment",
       "intent": "결제 수단",
       "triggers": {
-        "ko": ["결제", "카드", "현금", "계산", "페이", "어떻게 내"],
-        "en": ["pay", "payment", "card", "cash", "credit"],
-        "ja": ["支払", "カード", "現金", "会計", "決済"],
-        "zh": ["付款", "支付", "刷卡", "现金", "结账"]
+        "ko": [
+          "결제",
+          "카드",
+          "현금",
+          "계산",
+          "페이",
+          "어떻게 내"
+        ],
+        "en": [
+          "pay",
+          "payment",
+          "card",
+          "cash",
+          "credit"
+        ],
+        "ja": [
+          "支払",
+          "カード",
+          "現金",
+          "会計",
+          "決済"
+        ],
+        "zh": [
+          "付款",
+          "支付",
+          "刷卡",
+          "现金",
+          "结账"
+        ]
       },
       "answers": {
         "ko": "결제는 신용카드만 가능하고, 주문할 때마다 선결제예요. 현금·간편결제는 받지 않아요.",
@@ -76,16 +199,49 @@
         "ja": "お支払いはクレジットカードのみで、ご注文ごとの先払いとなります。現金やモバイル決済はご利用いただけません。",
         "zh": "我们只接受信用卡，且每次点单需先付款。不收现金和移动支付。"
       },
-      "audio": { "ko": "payment_ko.mp3", "en": "payment_en.mp3", "ja": "payment_ja.mp3", "zh": "payment_zh.mp3" }
+      "audio": {
+        "ko": "payment_ko.mp3",
+        "en": "payment_en.mp3",
+        "ja": "payment_ja.mp3",
+        "zh": "payment_zh.mp3"
+      }
     },
     {
       "id": "hours",
       "intent": "영업/주문 마감 시간",
       "triggers": {
-        "ko": ["몇 시", "영업", "마감", "라스트오더", "언제까지", "닫", "문 닫"],
-        "en": ["hours", "open", "close", "last order", "until what time", "what time"],
-        "ja": ["何時", "営業", "閉店", "ラストオーダー", "まで"],
-        "zh": ["几点", "营业", "打烊", "最后点单", "到几点", "关门"]
+        "ko": [
+          "몇 시",
+          "영업",
+          "마감",
+          "라스트오더",
+          "언제까지",
+          "닫",
+          "문 닫"
+        ],
+        "en": [
+          "hours",
+          "open",
+          "close",
+          "last order",
+          "until what time",
+          "what time"
+        ],
+        "ja": [
+          "何時",
+          "営業",
+          "閉店",
+          "ラストオーダー",
+          "まで"
+        ],
+        "zh": [
+          "几点",
+          "营业",
+          "打烊",
+          "最后点单",
+          "到几点",
+          "关门"
+        ]
       },
       "answers": {
         "ko": "영업은 오후 4시부터 밤 12시(자정)까지예요. 음식 주문은 밤 11시까지(라스트오더 10:50), 맥주 주문은 밤 11시 30분까지(라스트오더 11:20) 가능합니다.",
@@ -93,34 +249,100 @@
         "ja": "営業は16時から24時（深夜0時）までです。お料理のご注文は23時まで（ラストオーダー22:50）、ビールのご注文は23時30分まで（ラストオーダー23:20）です。",
         "zh": "营业时间为下午4点到午夜12点。餐点最晚点单到晚上11点（厨房最后点单10:50），啤酒最晚点单到11点30分（最后点单11:20）。"
       },
-      "audio": { "ko": "hours_ko.mp3", "en": "hours_en.mp3", "ja": "hours_ja.mp3", "zh": "hours_zh.mp3" }
+      "audio": {
+        "ko": "hours_ko.mp3",
+        "en": "hours_en.mp3",
+        "ja": "hours_ja.mp3",
+        "zh": "hours_zh.mp3"
+      }
     },
     {
       "id": "toilet_wifi",
       "intent": "화장실/와이파이",
       "triggers": {
-        "ko": ["화장실", "토일렛", "와이파이", "wifi", "비밀번호", "인터넷"],
-        "en": ["toilet", "restroom", "bathroom", "wifi", "password", "internet"],
-        "ja": ["トイレ", "お手洗い", "wifi", "パスワード", "ネット"],
-        "zh": ["厕所", "洗手间", "卫生间", "wifi", "无线", "密码", "网络"]
+        "ko": [
+          "화장실",
+          "토일렛",
+          "와이파이",
+          "wifi",
+          "비밀번호",
+          "인터넷"
+        ],
+        "en": [
+          "toilet",
+          "restroom",
+          "bathroom",
+          "wifi",
+          "password",
+          "internet"
+        ],
+        "ja": [
+          "トイレ",
+          "お手洗い",
+          "wifi",
+          "パスワード",
+          "ネット"
+        ],
+        "zh": [
+          "厕所",
+          "洗手间",
+          "卫生间",
+          "wifi",
+          "无线",
+          "密码",
+          "网络"
+        ]
       },
       "answers": {
-        "ko": "화장실은 입구 옆에 있어요(입구 옆 안내 지도 포스터 참고). 이용 시 비밀번호 [화장실 비밀번호]가 필요해요. 와이파이는 벽면 안내 포스터에 정보가 있어요 [와이파이 ID/PW].",
-        "en": "The restroom is next to the entrance (see the map poster by the entrance). You'll need the door code [TOILET_CODE] to use it. Wi-Fi details are on the poster on the wall [WIFI_ID/PW].",
-        "ja": "お手洗いは入口の横にございます（入口横の案内マップをご参照ください）。ご利用には暗証番号 [TOILET_CODE] が必要です。Wi-Fiの情報は壁の案内ポスターに記載しております [WIFI_ID/PW]。",
-        "zh": "洗手间在入口旁边（请参考入口旁的指示地图）。使用需要密码 [TOILET_CODE]。Wi-Fi 信息贴在墙上的指示海报上 [WIFI_ID/PW]。"
+        "ko": "화장실은 입구 옆에 있어요(입구 옆 안내 지도 포스터 참고). 이용 시 비밀번호 2026*가 필요해요. 와이파이는 직원이 직접 안내해 드릴게요. 손을 들어 직원을 불러주세요.",
+        "en": "The restroom is next to the entrance (see the map poster by the entrance). You'll need the door code 2026* to use it. For Wi-Fi, our staff will help you directly — please raise your hand to call a staff member.",
+        "ja": "お手洗いは入口の横にございます（入口横の案内マップをご参照ください）。ご利用には暗証番号 2026* が必要です。Wi-Fiはスタッフが直接ご案内いたします。手を挙げてスタッフをお呼びください。",
+        "zh": "洗手间在入口旁边（请参考入口旁的指示地图）。使用需要密码 2026*。Wi-Fi 由我们的店员直接为您提供，请举手呼叫店员。"
       },
-      "audio": { "ko": "toilet_wifi_ko.mp3", "en": "toilet_wifi_en.mp3", "ja": "toilet_wifi_ja.mp3", "zh": "toilet_wifi_zh.mp3" },
-      "needs_fill": ["TOILET_CODE", "WIFI_ID/PW"]
+      "audio": {
+        "ko": "toilet_wifi_ko.mp3",
+        "en": "toilet_wifi_en.mp3",
+        "ja": "toilet_wifi_ja.mp3",
+        "zh": "toilet_wifi_zh.mp3"
+      },
+      "needs_fill": []
     },
     {
       "id": "smoking_age",
       "intent": "흡연/연령",
       "triggers": {
-        "ko": ["담배", "흡연", "피우", "미성년", "나이", "신분증"],
-        "en": ["smoke", "smoking", "cigarette", "age", "underage", "id"],
-        "ja": ["タバコ", "喫煙", "吸", "年齢", "未成年", "身分証"],
-        "zh": ["抽烟", "吸烟", "香烟", "年龄", "未成年", "身份证"]
+        "ko": [
+          "담배",
+          "흡연",
+          "피우",
+          "미성년",
+          "나이",
+          "신분증"
+        ],
+        "en": [
+          "smoke",
+          "smoking",
+          "cigarette",
+          "age",
+          "underage",
+          "id"
+        ],
+        "ja": [
+          "タバコ",
+          "喫煙",
+          "吸",
+          "年齢",
+          "未成年",
+          "身分証"
+        ],
+        "zh": [
+          "抽烟",
+          "吸烟",
+          "香烟",
+          "年龄",
+          "未成年",
+          "身份证"
+        ]
       },
       "answers": {
         "ko": "실내와 가게 바로 앞은 금연이에요. 흡연은 가게 근처 골목길에서 부탁드려요. 주류 판매는 만 19세 이상만 가능하고 신분증 확인이 필요할 수 있어요.",
@@ -128,16 +350,44 @@
         "ja": "店内および店の真ん前は禁煙です。喫煙はお店近くの路地でお願いいたします。お酒の提供は満19歳以上のお客様のみで、身分証の確認をお願いする場合がございます。",
         "zh": "店内及店门口正前方禁止吸烟，请到店铺附近的小巷吸烟。酒类仅向满19岁以上的客人提供，可能需要查看身份证。"
       },
-      "audio": { "ko": "smoking_age_ko.mp3", "en": "smoking_age_en.mp3", "ja": "smoking_age_ja.mp3", "zh": "smoking_age_zh.mp3" }
+      "audio": {
+        "ko": "smoking_age_ko.mp3",
+        "en": "smoking_age_en.mp3",
+        "ja": "smoking_age_ja.mp3",
+        "zh": "smoking_age_zh.mp3"
+      }
     },
     {
       "id": "spicy",
       "intent": "메뉴 매운맛·특징",
       "triggers": {
-        "ko": ["매워", "맵", "매운", "교자", "오이중독", "시치미"],
-        "en": ["spicy", "hot", "gyoza", "cucumber", "shichimi"],
-        "ja": ["辛", "餃子", "きゅうり", "七味"],
-        "zh": ["辣", "饺子", "黄瓜", "七味"]
+        "ko": [
+          "매워",
+          "맵",
+          "매운",
+          "교자",
+          "오이중독",
+          "시치미"
+        ],
+        "en": [
+          "spicy",
+          "hot",
+          "gyoza",
+          "cucumber",
+          "shichimi"
+        ],
+        "ja": [
+          "辛",
+          "餃子",
+          "きゅうり",
+          "七味"
+        ],
+        "zh": [
+          "辣",
+          "饺子",
+          "黄瓜",
+          "七味"
+        ]
       },
       "answers": {
         "ko": "교자는 라면보다 안 매워요, 오히려 달콤한 편이에요. '오이중독'은 신라면 정도로 매운 편이에요(매운 메뉴). 마요네즈 위에 뿌린 시치미는 매콤하지만 마요와 섞여서 많이 맵지 않게 느껴질 수 있어요.",
@@ -145,16 +395,49 @@
         "ja": "餃子は辛くなく、ラーメンより穏やかで、むしろ甘めです。「オイ中毒（きゅうり料理）」は辛ラーメンほどの辛さで、辛いメニューです。マヨネーズの上にかかった七味はピリッとしますが、マヨと混ざるとあまり辛く感じないことが多いです。",
         "zh": "饺子不辣，比泡面更温和，反而偏甜。「黄瓜上瘾(Oi-jungdok)」属于较辣的菜，大约是辛拉面的辣度。蛋黄酱上撒的七味有些辣味，但和蛋黄酱混合后通常不会觉得很辣。"
       },
-      "audio": { "ko": "spicy_ko.mp3", "en": "spicy_en.mp3", "ja": "spicy_ja.mp3", "zh": "spicy_zh.mp3" }
+      "audio": {
+        "ko": "spicy_ko.mp3",
+        "en": "spicy_en.mp3",
+        "ja": "spicy_ja.mp3",
+        "zh": "spicy_zh.mp3"
+      }
     },
     {
       "id": "non_alcohol",
       "intent": "무알콜/음료 옵션",
       "triggers": {
-        "ko": ["무알콜", "논알콜", "술 못", "안 마", "음료", "라무네", "소다"],
-        "en": ["non-alcoholic", "no alcohol", "soft drink", "don't drink", "ramune", "soda"],
-        "ja": ["ノンアルコール", "ノンアル", "飲めない", "ソフトドリンク", "ラムネ"],
-        "zh": ["无酒精", "不喝酒", "软饮", "饮料", "弹珠汽水", "汽水"]
+        "ko": [
+          "무알콜",
+          "논알콜",
+          "술 못",
+          "안 마",
+          "음료",
+          "라무네",
+          "소다"
+        ],
+        "en": [
+          "non-alcoholic",
+          "no alcohol",
+          "soft drink",
+          "don't drink",
+          "ramune",
+          "soda"
+        ],
+        "ja": [
+          "ノンアルコール",
+          "ノンアル",
+          "飲めない",
+          "ソフトドリンク",
+          "ラムネ"
+        ],
+        "zh": [
+          "无酒精",
+          "不喝酒",
+          "软饮",
+          "饮料",
+          "弹珠汽水",
+          "汽水"
+        ]
       },
       "answers": {
         "ko": "술 안 드시는 분을 위해 논알콜 맥주와 논알콜 소다(라무네)가 있어요. 각 6,900원이에요.",
@@ -162,16 +445,77 @@
         "ja": "お酒を飲まれない方には、ノンアルコールビールとノンアルコールソーダ（ラムネ）がございます。各6,900ウォンです。",
         "zh": "为不喝酒的客人准备了无酒精啤酒和无酒精汽水(弹珠汽水Ramune)。每种6,900韩元。"
       },
-      "audio": { "ko": "non_alcohol_ko.mp3", "en": "non_alcohol_en.mp3", "ja": "non_alcohol_ja.mp3", "zh": "non_alcohol_zh.mp3" }
+      "audio": {
+        "ko": "non_alcohol_ko.mp3",
+        "en": "non_alcohol_en.mp3",
+        "ja": "non_alcohol_ja.mp3",
+        "zh": "non_alcohol_zh.mp3"
+      }
     }
   ],
   "escalation": {
     "note": "아래 키워드/의도 감지 시 LLM·FAQ로 답하지 말고 '직원을 불러주세요' 안내(아날로그 호출).",
     "triggers": {
-      "ko": ["알레르기", "땅콩", "임신", "환불", "깎아", "할인", "계산이 이상", "단체", "예약", "품절", "분실", "지갑", "잃어", "컴플레인", "이상해요"],
-      "en": ["allergy", "allergic", "peanut", "pregnant", "refund", "discount", "wrong bill", "group", "reservation", "sold out", "lost", "wallet", "complain"],
-      "ja": ["アレルギー", "妊娠", "返金", "割引", "まけて", "会計がおかしい", "団体", "予約", "売り切れ", "忘れ物", "財布", "クレーム"],
-      "zh": ["过敏", "怀孕", "退款", "打折", "便宜", "账单不对", "团体", "预约", "卖完", "丢", "钱包", "投诉"]
+      "ko": [
+        "알레르기",
+        "땅콩",
+        "임신",
+        "환불",
+        "깎아",
+        "할인",
+        "계산이 이상",
+        "단체",
+        "예약",
+        "품절",
+        "분실",
+        "지갑",
+        "잃어",
+        "컴플레인",
+        "이상해요"
+      ],
+      "en": [
+        "allergy",
+        "allergic",
+        "peanut",
+        "pregnant",
+        "refund",
+        "discount",
+        "wrong bill",
+        "group",
+        "reservation",
+        "sold out",
+        "lost",
+        "wallet",
+        "complain"
+      ],
+      "ja": [
+        "アレルギー",
+        "妊娠",
+        "返金",
+        "割引",
+        "まけて",
+        "会計がおかしい",
+        "団体",
+        "予約",
+        "売り切れ",
+        "忘れ物",
+        "財布",
+        "クレーム"
+      ],
+      "zh": [
+        "过敏",
+        "怀孕",
+        "退款",
+        "打折",
+        "便宜",
+        "账单不对",
+        "团体",
+        "预约",
+        "卖完",
+        "丢",
+        "钱包",
+        "投诉"
+      ]
     },
     "responses": {
       "ko": "이 부분은 정확한 확인이 필요해서, 손을 들어 직원을 불러주세요. 바로 도와드릴게요.",
@@ -182,7 +526,12 @@
   },
   "narration_beer": {
     "intent": "생맥주 설명 내레이션 (확장 기능, 버튼/핫워드 트리거)",
-    "audio": { "ko": "narration_ko.mp3", "en": "narration_en.mp3", "ja": "narration_ja.mp3", "zh": "narration_zh.mp3" },
+    "audio": {
+      "ko": "narration_ko.mp3",
+      "en": "narration_en.mp3",
+      "ja": "narration_ja.mp3",
+      "zh": "narration_zh.mp3"
+    },
     "scripts": {
       "ko": "반갑습니다. 저희 ganpai 광안2호점에서는 맥주에 대한 설명과 함께 맥주를 제공해드립니다. 시작하겠습니다. 먼저, 맥주를 따르기 전에 하는 작업을 린싱(rinsing)이라고 합니다. 잔을 깨끗이 세척하고 차갑게 만드는 칠링(chilling) 역할을 합니다. 저희 ganpai의 푸어링 기법은 삿포로 본사의 퍼펙트 푸어링 기법입니다. 맥주는 향이 날아가지 않게 45도 기울여 70%까지만 따릅니다. 나머지 30%는 크리미한 거품으로 맥주 헤드(head)를 형성해 풍미를 유지하고 산화를 방지하여, 첫 입부터 마지막 모금까지 일관된 맛을 지켜줍니다. 마지막으로 표면의 거친 거품을 깔끔하게 제거하고, 잔을 깨끗이 씻어 완성합니다. 저희 맥주는 지금 바로 한 입 드시는 게 가장 시원하고 맛있습니다. 감사합니다.",
       "en": "Welcome! Here at ganpai, Gwangan Branch 2, we serve our draft beer together with a short explanation. Let's begin. First, the step before pouring is called 'rinsing.' It cleans the glass and chills it — what we call 'chilling.' Our pouring method is the 'Perfect Pour' technique used at Sapporo's headquarters. We tilt the glass 45 degrees and fill it only to 70%, so the aroma doesn't escape. The remaining 30% forms a creamy foam head that locks in the flavor and prevents oxidation — keeping the taste consistent from the first sip to the last. Finally, we skim off the rough foam on top and rinse the glass clean to finish. Our beer is at its coldest and most refreshing the very moment you take your first sip. Enjoy, and thank you!",
@@ -196,8 +545,18 @@
     "note": "맥주명은 [BEER]=삿포로/에비스 2종 → 언어별 2버전 녹음 권장(또는 맥주명만 짧은 클립으로 분리 합성). 한국어 원본의 날짜·시각 안내는 매번 달라져(동적) 외국어판에서는 'right now/지금'으로 처리. 가위바위보는 동작 타이밍이 있어 외국인이 규칙을 먼저 이해해야 참여 가능 → 규칙 설명을 멘트 앞에 명확히 배치함.",
     "step1_announce": {
       "audio_variants": {
-        "sapporo": { "ko": "keg_announce_sapporo_ko.mp3", "en": "keg_announce_sapporo_en.mp3", "ja": "keg_announce_sapporo_ja.mp3", "zh": "keg_announce_sapporo_zh.mp3" },
-        "yebisu":  { "ko": "keg_announce_yebisu_ko.mp3",  "en": "keg_announce_yebisu_en.mp3",  "ja": "keg_announce_yebisu_ja.mp3",  "zh": "keg_announce_yebisu_zh.mp3" }
+        "sapporo": {
+          "ko": "keg_announce_sapporo_ko.mp3",
+          "en": "keg_announce_sapporo_en.mp3",
+          "ja": "keg_announce_sapporo_ja.mp3",
+          "zh": "keg_announce_sapporo_zh.mp3"
+        },
+        "yebisu": {
+          "ko": "keg_announce_yebisu_ko.mp3",
+          "en": "keg_announce_yebisu_en.mp3",
+          "ja": "keg_announce_yebisu_ja.mp3",
+          "zh": "keg_announce_yebisu_zh.mp3"
+        }
       },
       "scripts": {
         "ko": "잠시 주목 부탁드립니다! (종을 딸랑딸랑 흔들며) 여러분이 이렇게 많이 찾아와 주신 덕분에, 방금 저희 [BEER] 케그를 새것으로 교체했습니다! 케그를 새로 교체하면 더 신선하고 맛있는 맥주를 드릴 수 있어요. 제가 종을 흔들 때 다 같이 큰 박수와 환호 부탁드립니다. 그러면 더 열심히 하는 ganpai가 되겠습니다! 자—— [BEER] 새 거예요! [BEER] 완전 새 겁니다!",
@@ -207,7 +566,12 @@
       }
     },
     "step2_event_rps": {
-      "audio": { "ko": "keg_rps_ko.mp3", "en": "keg_rps_en.mp3", "ja": "keg_rps_ja.mp3", "zh": "keg_rps_zh.mp3" },
+      "audio": {
+        "ko": "keg_rps_ko.mp3",
+        "en": "keg_rps_en.mp3",
+        "ja": "keg_rps_ja.mp3",
+        "zh": "keg_rps_zh.mp3"
+      },
       "scripts": {
         "ko": "새 케그를 기념해서 간단한 이벤트를 준비했어요! 저와 가위바위보를 합니다. 규칙은 간단해요 — 저와 비기거나 지는 분은 손을 내려주세요. 끝까지 이기는 분께는 시원한 삿포로 생맥주 한 잔을 드립니다! 자, 시작할게요. 안 내면 진 거예요! 가위! 바위! 보!",
         "en": "To celebrate the new keg, we have a quick game for you! You'll play rock-paper-scissors against me. The rule is simple — if you tie or lose against me, just lower your hand. Whoever stays in until the end wins a free glass of Sapporo draft! Ready? You have to throw, or you're out! Rock... Paper... Scissors... SHOOT!",
