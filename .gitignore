@@ -1,0 +1,12 @@
+# 음성 캐시 (용량 큼 / generate_tts.py 로 재생성 가능)
+audio/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+.fuse_hidden*
