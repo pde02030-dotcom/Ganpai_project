@@ -1,13 +1,12 @@
 /* ganpai 키오스크 PWA 서비스워커 — 오프라인 캐싱
-   콘텐츠/음성이 바뀌면 CACHE 버전을 올려라 (예: v5 → v6) → 자동 갱신.
-   프리캐시: 기본 음성 프로필(bold_f) + 공용(종소리·아이콘·코어).
+   콘텐츠/음성이 바뀌면 CACHE 버전을 올려라 (예: v6 → v7) → 자동 갱신.
+   프리캐시: 기본 음성 프로필(bold_f) + 코어(html·json·아이콘). 종소리는 실제 녹음 확보 후 재추가 예정.
    다른 프로필(bold_m)은 재생 시 런타임 캐시(cache-first)로 자동 저장. */
-const CACHE = "ganpai-v6";
+const CACHE = "ganpai-v7";
 
 const ASSETS = [
   "./","index.html","faq_cache.json","manifest.webmanifest",
   "icon-192.png","icon-512.png","apple-touch-icon.png",
-  "audio/bell.mp3?v=6",
   "audio/bold_f/escalation_en.mp3","audio/bold_f/escalation_ja.mp3","audio/bold_f/escalation_ko.mp3","audio/bold_f/escalation_zh.mp3",
   "audio/bold_f/hours_en.mp3","audio/bold_f/hours_ja.mp3","audio/bold_f/hours_ko.mp3","audio/bold_f/hours_zh.mp3",
   "audio/bold_f/keg_announce_sapporo_en.mp3","audio/bold_f/keg_announce_sapporo_ja.mp3","audio/bold_f/keg_announce_sapporo_ko.mp3","audio/bold_f/keg_announce_sapporo_zh.mp3",
@@ -19,7 +18,8 @@ const ASSETS = [
   "audio/bold_f/payment_en.mp3","audio/bold_f/payment_ja.mp3","audio/bold_f/payment_ko.mp3","audio/bold_f/payment_zh.mp3",
   "audio/bold_f/recommend_en.mp3","audio/bold_f/recommend_ja.mp3","audio/bold_f/recommend_ko.mp3","audio/bold_f/recommend_zh.mp3",
   "audio/bold_f/seat_charge_en.mp3","audio/bold_f/seat_charge_ja.mp3","audio/bold_f/seat_charge_ko.mp3","audio/bold_f/seat_charge_zh.mp3",
-  "audio/bold_f/smoking_age_en.mp3","audio/bold_f/smoking_age_ja.mp3","audio/bold_f/smoking_age_ko.mp3","audio/bold_f/smoking_age_zh.mp3",
+  "audio/bold_f/smoking_en.mp3","audio/bold_f/smoking_ja.mp3","audio/bold_f/smoking_ko.mp3","audio/bold_f/smoking_zh.mp3",
+  "audio/bold_f/age_en.mp3","audio/bold_f/age_ja.mp3","audio/bold_f/age_ko.mp3","audio/bold_f/age_zh.mp3",
   "audio/bold_f/spicy_en.mp3","audio/bold_f/spicy_ja.mp3","audio/bold_f/spicy_ko.mp3","audio/bold_f/spicy_zh.mp3",
   "audio/bold_f/toilet_wifi_en.mp3","audio/bold_f/toilet_wifi_ja.mp3","audio/bold_f/toilet_wifi_ko.mp3","audio/bold_f/toilet_wifi_zh.mp3",
   "audio/bold_f/welcome_en.mp3","audio/bold_f/welcome_ja.mp3","audio/bold_f/welcome_ko.mp3","audio/bold_f/welcome_zh.mp3"

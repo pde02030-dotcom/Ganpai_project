@@ -19,6 +19,11 @@ faq_cache.json 의 모든 대본(FAQ·에스컬레이션·내레이션·환영·
   dryrun : 음성 안 굽고 목록만
            python3 generate_tts.py --backend dryrun
 
+  --only TOKEN : 파일명에 TOKEN이 든 멘트만 생성 (바뀐 것만 빠르게 재굽기)
+           예) 맥주 내레이션만:   python3 generate_tts.py --backend edge --only narration
+               환영 멘트만:       python3 generate_tts.py --backend edge --only welcome
+               결제 멘트만:       python3 generate_tts.py --backend edge --only payment
+
 빈칸([CODE] 등 대괄호 placeholder) 남은 대본은 자동 SKIP.
 콘텐츠 톤: calm(FAQ·내레이션·환영) / lively(케그) → 프로필 base 위에 가산.
 """
@@ -59,8 +64,9 @@ VOICE_PROFILES = {
 DEFAULT_PROFILE = "bold_f"
 
 # ── 콘텐츠 톤(상황별) — 프로필 위에 가산 ──
+#   calm = 안내 멘트(FAQ·내레이션·환영). 테이블 회전 위해 약 1.5배속(+42% → 프로필 +8% 합쳐 ≈+50% = 1.5배).
 TONE = {
-    "calm":   {"rate": -8, "pitch": 0,  "say_wpm": 165},
+    "calm":   {"rate": 42, "pitch": 0,  "say_wpm": 248},
     "lively": {"rate": 12, "pitch": 10, "say_wpm": 205},
 }
 
@@ -154,6 +160,11 @@ def main():
     if "--backend" in sys.argv:
         backend = sys.argv[sys.argv.index("--backend") + 1]
 
+    # --only TOKEN : 파일명에 TOKEN이 든 멘트만 생성 (바뀐 것만 빠르게 재굽기)
+    only = None
+    if "--only" in sys.argv:
+        only = sys.argv[sys.argv.index("--only") + 1]
+
     cache = json.load(open(CACHE, encoding="utf-8"))
     all_jobs = collect_jobs(cache)
 
@@ -162,8 +173,14 @@ def main():
     for text, fname, tone in all_jobs:
         (skipped if PLACEHOLDER.search(text) else jobs).append((text, fname, tone))
 
+    # --only 필터
+    if only:
+        jobs = [j for j in jobs if only in Path(j[1]).name]
+
     nprof = 1 if backend == "say" else len(VOICE_PROFILES)
     print(f"대본 {len(jobs)}개 × 프로필 {nprof} = 총 {len(jobs) * nprof}개  [backend={backend}]")
+    if only:
+        print(f"  🎯 --only '{only}' → 파일명에 이 단어가 든 멘트만 생성")
     if skipped:
         print("  ⏸️ 빈칸으로 SKIP:", ", ".join(sorted({Path(f).name for _, f, _ in skipped})))
     print()

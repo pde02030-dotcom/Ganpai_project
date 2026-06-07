@@ -49,10 +49,10 @@
         ]
       },
       "answers": {
-        "ko": "메뉴판에서 메뉴 고르시고, 선결제해 주세요. 추가 주문 때도 마찬가지입니다.",
-        "en": "Pick your items from the menu and pay up front, please. Same for any additional orders.",
-        "ja": "メニューからお選びになり、先払いをお願いします。追加のご注文も同じです。",
-        "zh": "请从菜单选好并先付款。追加点单时也一样。"
+        "ko": "메뉴판에서 고르신 뒤 직원에게 말씀하시면 돼요. 주문할 때마다 카드로 선결제예요. 한 잔 더 하실 때도 같은 방식입니다.",
+        "en": "Just pick from the menu and tell our staff. You pay by card up front each time you order — and it's the same when you'd like another round.",
+        "ja": "メニューからお選びになって、スタッフにお申し付けください。ご注文ごとにカードで先払いです。おかわりの際も同じ流れです。",
+        "zh": "从菜单上选好后告诉店员即可。每次点单都用信用卡先付款，续杯时也是一样的方式。"
       },
       "audio": {
         "ko": "order_ko.mp3",
@@ -99,7 +99,7 @@
         ]
       },
       "answers": {
-        "ko": "인기 메뉴는 테바사키(닭날개 튀김), 닭껍질튀김, 교자예요. 생맥주는 삿포로와 에비스, 그리고 히든 메뉴 '쇼맥'이 있어요. 쇼맥은 일본 고구마 소츄 '다이야메'를 삿포로에 섞은 시그니처로, 부드럽고 향긋해요.",
+        "ko": "인기 메뉴는 테바사키(닭날개 튀김), 닭껍질튀김, 교자예요. 생맥주는 삿포로와 에비스, 그리고 히든 메뉴 '쇼맥'이 있어요. 쇼맥은 일본 고구마 소주 '다이야메'를 삿포로 생맥주에 섞은 시그니처로, 부드럽고 향긋해요.",
         "en": "Our popular picks are Tebasaki (fried chicken wings), crispy chicken skin, and gyoza. On draft we have Sapporo and Yebisu, plus a hidden menu called 'Shomac' — our signature, mixing Japanese sweet-potato shochu 'Daiyame' into Sapporo draft for a smooth, fragrant taste.",
         "ja": "人気メニューは手羽先、鶏皮の唐揚げ、餃子です。生ビールはサッポロとエビス、そして裏メニューの「ショーメク」もございます。ショーメクは、日本のさつまいも焼酎「だいやめ」をサッポロ生に混ぜたシグネチャーで、まろやかで芳醇な味わいです。",
         "zh": "人气菜品有手羽先（炸鸡翅）、炸鸡皮和饺子。生啤有札幌和惠比寿，还有隐藏菜单「烧麦酒」——我们的招牌，把日本红薯烧酎「Daiyame」调入札幌生啤，口感顺滑、香气怡人。"
@@ -194,10 +194,10 @@
         ]
       },
       "answers": {
-        "ko": "결제는 신용카드만 가능하고, 주문할 때마다 선결제예요. 현금은 받지 않아요.",
-        "en": "We accept credit cards only, and payment is up front with each order. We don't take cash.",
-        "ja": "お支払いはクレジットカードのみで、ご注文ごとの先払いです。現金はご利用いただけません。",
-        "zh": "我们只接受信用卡，每次点单需先付款。不收现金。"
+        "ko": "결제는 신용카드만 가능하고, 주문할 때마다 선결제예요. 현금·간편결제는 받지 않아요.",
+        "en": "We accept credit cards only, and payment is made up front with each order. We don't take cash or mobile payments.",
+        "ja": "お支払いはクレジットカードのみで、ご注文ごとの先払いとなります。現金やモバイル決済はご利用いただけません。",
+        "zh": "我们只接受信用卡，且每次点单需先付款。不收现金和移动支付。"
       },
       "audio": {
         "ko": "payment_ko.mp3",
@@ -294,10 +294,10 @@
         ]
       },
       "answers": {
-        "ko": "화장실은 입구 옆에 있어요. 이용 시 비밀번호 2026*가 필요해요. 와이파이는 직원이 직접 안내해 드릴게요.",
-        "en": "The restroom is next to the entrance. You'll need the door code 2026* to use it. For Wi-Fi, our staff will help you directly.",
-        "ja": "お手洗いは入口の横にございます。ご利用には暗証番号 2026* が必要です。Wi-Fiはスタッフが直接ご案内いたします。",
-        "zh": "洗手间在入口旁边。使用需要密码 2026*。Wi-Fi 由我们的店员直接为您提供。"
+        "ko": "화장실은 입구 옆에 있어요(입구 옆 안내 지도 포스터 참고). 이용 시 비밀번호 2026*가 필요해요. 와이파이는 직원이 직접 안내해 드릴게요. 손을 들어 직원을 불러주세요.",
+        "en": "The restroom is next to the entrance (see the map poster by the entrance). You'll need the door code 2026* to use it. For Wi-Fi, our staff will help you directly — please raise your hand to call a staff member.",
+        "ja": "お手洗いは入口の横にございます（入口横の案内マップをご参照ください）。ご利用には暗証番号 2026* が必要です。Wi-Fiはスタッフが直接ご案内いたします。手を挙げてスタッフをお呼びください。",
+        "zh": "洗手间在入口旁边（请参考入口旁的指示地图）。使用需要密码 2026*。Wi-Fi 由我们的店员直接为您提供，请举手呼叫店员。"
       },
       "audio": {
         "ko": "toilet_wifi_ko.mp3",
@@ -308,82 +308,53 @@
       "needs_fill": []
     },
     {
-      "id": "smoking",
-      "intent": "흡연 안내",
+      "id": "smoking_age",
+      "intent": "흡연/연령",
       "triggers": {
         "ko": [
           "담배",
           "흡연",
-          "피우"
+          "피우",
+          "미성년",
+          "나이",
+          "신분증"
         ],
         "en": [
           "smoke",
           "smoking",
-          "cigarette"
+          "cigarette",
+          "age",
+          "underage",
+          "id"
         ],
         "ja": [
           "タバコ",
           "喫煙",
-          "吸"
-        ],
-        "zh": [
-          "抽烟",
-          "吸烟",
-          "香烟"
-        ]
-      },
-      "answers": {
-        "ko": "실내와 가게 바로 앞은 금연이에요. 흡연은 가게 근처 골목길에서 부탁드려요.",
-        "en": "Smoking isn't allowed indoors or right in front of the shop — please use the alley nearby.",
-        "ja": "店内および店の真ん前は禁煙です。喫煙はお店近くの路地でお願いいたします。",
-        "zh": "店内及店门口正前方禁止吸烟，请到店铺附近的小巷吸烟。"
-      },
-      "audio": {
-        "ko": "smoking_ko.mp3",
-        "en": "smoking_en.mp3",
-        "ja": "smoking_ja.mp3",
-        "zh": "smoking_zh.mp3"
-      }
-    },
-    {
-      "id": "age",
-      "intent": "연령·주류",
-      "triggers": {
-        "ko": [
-          "미성년",
-          "나이",
-          "연령",
-          "신분증",
-          "술 나이"
-        ],
-        "en": [
-          "age",
-          "underage",
-          "id",
-          "minor"
-        ],
-        "ja": [
+          "吸",
           "年齢",
           "未成年",
           "身分証"
         ],
         "zh": [
+          "抽烟",
+          "吸烟",
+          "香烟",
           "年龄",
           "未成年",
           "身份证"
         ]
       },
       "answers": {
-        "ko": "주류 판매는 만 19세 이상만 가능하고, 신분증 확인이 필요할 수 있어요.",
-        "en": "Alcohol is served only to guests 19 and older, and we may ask for ID.",
-        "ja": "お酒の提供は満19歳以上のお客様のみで、身分証の確認をお願いする場合がございます。",
-        "zh": "酒类仅向满19岁以上的客人提供，可能需要查看身份证。"
+        "ko": "실내와 가게 바로 앞은 금연이에요. 흡연은 가게 근처 골목길에서 부탁드려요. 주류 판매는 만 19세 이상만 가능하고 신분증 확인이 필요할 수 있어요.",
+        "en": "Smoking isn't allowed indoors or right in front of the shop — please use the alley nearby. Alcohol is served only to guests 19 and older, and we may ask for ID.",
+        "ja": "店内および店の真ん前は禁煙です。喫煙はお店近くの路地でお願いいたします。お酒の提供は満19歳以上のお客様のみで、身分証の確認をお願いする場合がございます。",
+        "zh": "店内及店门口正前方禁止吸烟，请到店铺附近的小巷吸烟。酒类仅向满19岁以上的客人提供，可能需要查看身份证。"
       },
       "audio": {
-        "ko": "age_ko.mp3",
-        "en": "age_en.mp3",
-        "ja": "age_ja.mp3",
-        "zh": "age_zh.mp3"
+        "ko": "smoking_age_ko.mp3",
+        "en": "smoking_age_en.mp3",
+        "ja": "smoking_age_ja.mp3",
+        "zh": "smoking_age_zh.mp3"
       }
     },
     {
@@ -562,10 +533,10 @@
       "zh": "narration_zh.mp3"
     },
     "scripts": {
-      "ko": "반갑습니다. 맥주를 따르기 전에 하는 작업을 린싱이라고 하는데, 잔을 깨끗하게 세척하고 차갑게 만드는 칠링 역할을 합니다. 간빠의 맥주는 삿포로 본사의 '퍼펙트 푸어링' 기법으로 따릅니다. 향이 날아가지 않게 잔을 45도 기울여 70%까지 채우고, 나머지 30%는 크리미한 거품으로 채웁니다. 이 거품이 풍미를 유지하고, 산화를 방지하여, 첫 모금부터 마지막 모금까지 맛있게 드실 수 있도록 제공합니다. 크리미한 거품으로 밀어낸 거친 거품들을 스키밍하고, 잔 외부를 한 번 더 깨끗하게 씻어서 완성됩니다. 저희 맥주는 지금 바로 드시는 걸 가장 추천드립니다.",
-      "en": "Welcome! The step before pouring is called rinsing — it washes the glass clean and chills it, what we call chilling. At Ganppa, we pour our beer with Sapporo headquarters' 'Perfect Pour' technique. We tilt the glass 45 degrees and fill it to 70% so the aroma doesn't escape, then fill the last 30% with a creamy foam. This foam keeps the flavor in and prevents oxidation, so the beer stays delicious from the first sip to the last. We skim off the coarse foam pushed up by the creamy head, wipe the outside of the glass clean once more, and it's finished. We recommend enjoying your beer right away.",
-      "ja": "いらっしゃいませ。ビールを注ぐ前に行う作業を「リンシング」と申しまして、グラスをきれいに洗い、冷やす「チリング」の役割を果たします。ガンパのビールは、サッポロ本社の「パーフェクトポアリング」技法で注いでいます。香りが逃げないようにグラスを45度傾けて70％まで注ぎ、残りの30％はクリーミーな泡で満たします。この泡が風味を保ち、酸化を防いで、最初の一口から最後の一口まで美味しくお召し上がりいただけます。クリーミーな泡で押し上げられた粗い泡をスキミングし、グラスの外側をもう一度きれいに拭いて仕上げます。当店のビールは、今すぐお召し上がりいただくのが一番のおすすめです。",
-      "zh": "欢迎光临！倒啤酒之前的步骤叫做润杯，作用是把杯子洗净并冰镇，也就是冰杯。甘趴的啤酒采用札幌总部的「完美注酒」手法。倒酒时将杯子倾斜45度，只倒到70%，让香气不流失，剩下的30%用绵密的泡沫填满。这层泡沫能锁住风味、防止氧化，让您从第一口到最后一口都美味如初。再把被绵密泡沫顶出的粗泡沫撇去，把杯子外侧再擦拭干净即完成。我们的啤酒，最推荐现在马上品尝。"
+      "ko": "반갑습니다. 간빠의 맥주는 삿포로 본사의 '퍼펙트 푸어링' 기법으로 따릅니다. 향이 날아가지 않게 잔을 45도 기울여 70%까지 채우고, 나머지 30%는 크리미한 거품으로 채웁니다. 이 거품이 풍미를 가두고 산화를 막아, 첫 모금부터 끝까지 같은 맛을 지켜줍니다. 지금 바로 한 입 드시는 게 가장 시원하고 맛있습니다. 맛있게 즐기세요!",
+      "en": "Welcome! At Ganppa, we pour our beer using Sapporo's 'Perfect Pour' technique. We tilt the glass 45 degrees and fill it to 70% so the aroma stays in, then top the last 30% with a creamy foam head. That foam locks in the flavor and prevents oxidation, keeping the taste consistent from the first sip to the last. It's coldest and best the moment you take your first sip. Enjoy!",
+      "ja": "いらっしゃいませ。ガンパのビールは、サッポロ本社の「パーフェクトポアリング」技法で注いでいます。香りが逃げないようにグラスを45度傾けて70％まで注ぎ、残りの30％はクリーミーな泡で仕上げます。この泡が風味を閉じ込め、酸化を防いで、最初の一口から最後まで同じ美味しさを保ちます。今すぐ一口召し上がるのが一番冷たくて美味しいです。どうぞお楽しみください！",
+      "zh": "欢迎光临！甘趴的啤酒采用札幌总部的「完美注酒」手法。将杯子倾斜45度，只倒到70%，让香气不流失，剩下的30%用绵密的泡沫做成泡盖。这层泡沫能锁住风味、防止氧化，让您从第一口到最后都保持同样的美味。现在马上喝第一口最冰爽、最好喝。请慢用！"
     }
   },
   "narration_keg": {
